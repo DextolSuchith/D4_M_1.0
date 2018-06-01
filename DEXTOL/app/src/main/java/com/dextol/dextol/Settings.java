@@ -9,10 +9,12 @@ import android.view.View;
 
 import static android.content.Context.LAYOUT_INFLATER_SERVICE;
 
-public class Settings extends AppCompatActivity {
+public class Settings extends AppCompatActivity
+{
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings);
     }

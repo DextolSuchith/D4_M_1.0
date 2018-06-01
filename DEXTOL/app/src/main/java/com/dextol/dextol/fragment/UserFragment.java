@@ -52,13 +52,10 @@ public class UserFragment extends Fragment
               AlertDialog.Builder adb=new AlertDialog.Builder(getContext());
               adb.setTitle("OTP Generation");
               adb.setView(v1);
-             final AlertDialog ad=adb.create();
+              final AlertDialog ad=adb.create();
               ad.show();
 
 
-
-
-             //EditText et1= v1.findViewById(R.id.otpet1);
                 Button b=v1.findViewById(R.id.otpb1);
                 b.setOnClickListener(new View.OnClickListener()
                 {

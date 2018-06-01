@@ -9,17 +9,20 @@ import android.widget.Toast;
 public class Login extends Activity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
     }
 
-    public void Register(View view) {
+    public void Register(View view)
+    {
         Intent it = new Intent(this, Registration.class);
         startActivity(it);
     }
 
-    public void Login(View view) {
+    public void Login(View view)
+    {
 
         Intent it = new Intent(this, MainActivity.class);
         startActivity(it);

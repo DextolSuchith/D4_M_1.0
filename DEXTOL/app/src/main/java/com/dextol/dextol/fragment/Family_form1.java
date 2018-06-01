@@ -40,13 +40,13 @@ public class Family_form1 extends Fragment
         sp2=v.findViewById(R.id.sprelation);
         sp3=v.findViewById(R.id.spblood);
 
-        ArrayAdapter a1=new ArrayAdapter(getContext(),android.R.layout.simple_dropdown_item_1line,Gender);
+        ArrayAdapter<String> a1=new ArrayAdapter<>(getContext(),android.R.layout.simple_dropdown_item_1line,Gender);
         sp1.setAdapter(a1);
 
-        ArrayAdapter a2=new ArrayAdapter(getContext(),android.R.layout.simple_dropdown_item_1line,Relation);
+        ArrayAdapter<String> a2=new ArrayAdapter<>(getContext(),android.R.layout.simple_dropdown_item_1line,Relation);
         sp2.setAdapter(a2);
 
-        ArrayAdapter a3=new ArrayAdapter(getContext(),android.R.layout.simple_dropdown_item_1line,Blood);
+        ArrayAdapter<String> a3=new ArrayAdapter<>(getContext(),android.R.layout.simple_dropdown_item_1line,Blood);
         sp3.setAdapter(a3);
         Button b1=v.findViewById(R.id.alertb1);
         b1.setOnClickListener(new View.OnClickListener()

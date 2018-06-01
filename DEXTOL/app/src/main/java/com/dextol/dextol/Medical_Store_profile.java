@@ -7,16 +7,19 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 
-public class Medical_Store_profile extends Activity {
+public class Medical_Store_profile extends Activity
+{
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.medicalstore_profile);
     }
 
 
-    public void sort(View view) {
+    public void sort(View view)
+    {
         LayoutInflater li=  (LayoutInflater)getSystemService(LAYOUT_INFLATER_SERVICE);
         View v=li.inflate(R.layout.medical_list_style,null,false);
         AlertDialog.Builder adb=new AlertDialog.Builder(this);

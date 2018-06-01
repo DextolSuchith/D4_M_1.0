@@ -10,7 +10,8 @@ import android.view.View;
 public class Doctor_profile extends Activity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.doctor_profile);
     }

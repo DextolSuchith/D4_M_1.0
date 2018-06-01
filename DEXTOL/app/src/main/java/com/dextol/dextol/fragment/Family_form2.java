@@ -15,7 +15,8 @@ import com.dextol.dextol.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Family_form2 extends Fragment {
+public class Family_form2 extends Fragment
+{
 
 
     String Country[]={"--Select Country-- "};
@@ -25,7 +26,8 @@ public class Family_form2 extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+                             Bundle savedInstanceState)
+    {
         // Inflate the layout for this fragment
         View v=inflater.inflate(R.layout.fragment_family_form2, container, false);
 
@@ -35,15 +37,16 @@ public class Family_form2 extends Fragment {
 
 
 
-        ArrayAdapter a1=new ArrayAdapter(getContext(),android.R.layout.simple_dropdown_item_1line,Country);
-        sp1.setAdapter(a1);
+         ArrayAdapter<String> a1=new ArrayAdapter<>(getContext(),android.R.layout.simple_dropdown_item_1line,Country);
+         sp1.setAdapter(a1);
 
-        ArrayAdapter a2=new ArrayAdapter(getContext(),android.R.layout.simple_dropdown_item_1line,State);
-        sp2.setAdapter(a2);
+         ArrayAdapter<String> a2=new ArrayAdapter<>(getContext(),android.R.layout.simple_dropdown_item_1line,State);
+          sp2.setAdapter(a2);
 
-        ArrayAdapter a3=new ArrayAdapter(getContext(),android.R.layout.simple_dropdown_item_1line,District);
-        sp3.setAdapter(a3);
-   return v;
+          ArrayAdapter<String> a3=new ArrayAdapter<>(getContext(),android.R.layout.simple_dropdown_item_1line,District);
+          sp3.setAdapter(a3);
+
+        return v;
     }
 
 }

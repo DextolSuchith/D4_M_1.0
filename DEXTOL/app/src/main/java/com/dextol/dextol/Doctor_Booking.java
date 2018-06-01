@@ -16,13 +16,14 @@ public class Doctor_Booking extends Activity {
 TextView tv;
 Spinner sp1;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.doctor__booking);
         tv=findViewById(R.id.tvdate);
        sp1= findViewById(R.id.A_typesp);
 
-        ArrayAdapter a=new ArrayAdapter(this,android.R.layout.simple_dropdown_item_1line,A_type);
+        ArrayAdapter<String> a=new ArrayAdapter<>(this,android.R.layout.simple_dropdown_item_1line,A_type);
         sp1.setAdapter(a);
 
     }
@@ -34,13 +35,15 @@ Spinner sp1;
         int month=c.get(Calendar.MONTH);
         int day=c.get(Calendar.DAY_OF_MONTH);
         int date=c.get(Calendar.DATE);
-        DatePickerDialog dp=new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+        DatePickerDialog dp=new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener()
+        {
             @Override
-            public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {
+            public void onDateSet(DatePicker datePicker, int i, int i1, int i2)
+            {
 
             }
         },year,month,day);
-    DatePicker d=dp.getDatePicker();
+        DatePicker d=dp.getDatePicker();
 
     }
 }

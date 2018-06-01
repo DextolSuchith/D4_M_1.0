@@ -18,21 +18,19 @@ import android.widget.ImageView;
 import com.dextol.dextol.fragment.MainPageFragment;
 
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
+{
 
     private DrawerLayout drawer;
     ImageView iv;
     FrameLayout fc;
-
     private NavigationView nvDrawer;
     private ActionBarDrawerToggle drawerToggle;
-
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         nvDrawer = findViewById(R.id.nav_view);
@@ -42,26 +40,22 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-
-        if (savedInstanceState == null) {
-
-
+        if (savedInstanceState == null)
+        {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new MainPageFragment()).commit();
             // nvDrawer.setCheckedItem(R.id.);
         }
-
-
     }
-
-
     @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
+    public boolean onNavigationItemSelected(@NonNull MenuItem item)
+    {
+        switch (item.getItemId())
+        {
+
             case R.id.idfamily:
                 Intent it = new Intent(this, Add_Family.class);
                 startActivity(it);
-
                 break;
 
             case R.id.iddash:
@@ -111,13 +105,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     @Override
-    public void onBackPressed() {
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
+    public void onBackPressed()
+    {
+        if (drawer.isDrawerOpen(GravityCompat.START))
+        {
             drawer.closeDrawer(GravityCompat.START);
-        } else {
-
-            super.onBackPressed();
-        }
+        } else
+            {
+                super.onBackPressed();
+            }
 
     }
 
