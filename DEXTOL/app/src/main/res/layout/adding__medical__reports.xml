@@ -1,0 +1,44 @@
+<LinearLayout
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    style="@style/background"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent">
+
+<EditText
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:ems="10"
+    android:hint="@string/record_name"/>
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_margin="5dp"
+        android:hint="@string/record_created_date"/>
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/record_description"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:drawableEnd="@drawable/notes"
+        android:textAllCaps="false"
+        android:layout_margin="10dp"
+        android:text="@string/upload_prescription"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textAllCaps="false"
+        android:text="@string/submit"/>
+</LinearLayout>

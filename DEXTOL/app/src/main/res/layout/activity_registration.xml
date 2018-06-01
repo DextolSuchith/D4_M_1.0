@@ -1,0 +1,25 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/lll"
+    android:orientation="vertical"
+    style="@style/background"
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <fragment
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/headf1"
+
+        class="com.dextol.dextol.HeadFragment"/>
+
+    <fragment
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/userf2"
+        class="com.dextol.dextol.UserFragment"/>
+
+</LinearLayout>

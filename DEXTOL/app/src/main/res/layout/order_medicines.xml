@@ -1,0 +1,42 @@
+<LinearLayout
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    style="@style/background"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent">
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:background="@null"
+        android:drawableEnd="@drawable/notes"
+        android:textAllCaps="false"
+        android:text="@string/upload_prescription"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_margin="5dp"
+        android:hint="@string/enter_medicine_required"/>
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:text="@string/home_delivery"/>
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:text="@string/walkin"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="8"
+        android:layout_margin="10dp"
+        android:textAllCaps="false"
+        android:text="@string/order_now"/>
+</LinearLayout>

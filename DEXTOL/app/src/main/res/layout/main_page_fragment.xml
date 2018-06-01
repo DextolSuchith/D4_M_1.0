@@ -1,0 +1,81 @@
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <android.support.v7.widget.SearchView
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+
+
+        android:iconifiedByDefault="false"
+        app:queryHint="Search for Doctors,Medical Stores"
+        android:focusable="true">
+
+    </android.support.v7.widget.SearchView>
+
+
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/b1docpf"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:layout_height="100dp"
+                android:text="@string/doctor"
+                android:textAllCaps="false"
+                />
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/b2dgnpf"
+
+                android:textAllCaps="false"
+                android:textSize="12sp"
+                android:layout_height="100dp"
+                android:text="@string/diagnostics"/>
+
+            <Button
+                android:id="@+id/b3mspf"
+                android:paddingTop="25dp"
+                android:text="@string/medical_stores"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="100dp"
+                android:textAllCaps="false"
+
+                android:textSize="12sp"
+               />
+
+            <Button
+                android:paddingTop="25dp"
+                android:id="@+id/b4treatpf"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="100dp"
+                android:textSize="12sp"
+                android:text="@string/treatment_theraphy"
+                android:textAllCaps="false" />
+
+
+        </TableRow>
+
+    </TableLayout>
+
+
+</LinearLayout>
