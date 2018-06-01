@@ -12,6 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/f_fragment"
-        class="com.dextol.dextol.Family_form1"/>
+        class="com.dextol.dextol.fragment.Family_form1"/>
 
 </LinearLayout>

@@ -1,4 +1,4 @@
-package com.dextol.dextol;
+package com.dextol.dextol.fragment;
 
 
 import android.app.AlertDialog;
@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.dextol.dextol.R;
 
 
 /**

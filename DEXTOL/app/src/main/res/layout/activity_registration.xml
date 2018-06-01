@@ -13,13 +13,13 @@
         android:layout_height="wrap_content"
         android:id="@+id/headf1"
 
-        class="com.dextol.dextol.HeadFragment"/>
+        class="com.dextol.dextol.fragment.HeadFragment"/>
 
     <fragment
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/userf2"
-        class="com.dextol.dextol.UserFragment"/>
+        class="com.dextol.dextol.fragment.UserFragment"/>
 
 </LinearLayout>

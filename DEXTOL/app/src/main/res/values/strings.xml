@@ -67,6 +67,14 @@
     <string name="record_name">Record Name</string>
     <string name="record_created_date">Record Created Date</string>
     <string name="record_description">Record Description</string>
+    <string name="update">Update</string>
+    <string name="update_details">Update Details</string>
+    <string name="change_password">Change Password</string>
+    <string name="old_password">Old Password</string>
+    <string name="filters">Filters</string>
+    <string name="sort_by">Sort By</string>
+    <string name="profile_type">Profile Type</string>
+
 
 
 </resources>

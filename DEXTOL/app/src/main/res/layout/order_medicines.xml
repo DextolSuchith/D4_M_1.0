@@ -14,12 +14,19 @@
         android:drawableEnd="@drawable/notes"
         android:textAllCaps="false"
         android:text="@string/upload_prescription"/>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:layout_margin="5dp"
         android:hint="@string/enter_medicine_required"/>
+    </android.support.design.widget.TextInputLayout>
 
     <RadioButton
         android:layout_width="wrap_content"

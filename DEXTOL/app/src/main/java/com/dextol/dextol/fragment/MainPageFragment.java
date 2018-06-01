@@ -1,4 +1,4 @@
-package com.dextol.dextol;
+package com.dextol.dextol.fragment;
 
 
 import android.content.Intent;
@@ -8,6 +8,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
+import com.dextol.dextol.Diagnostics_profile;
+import com.dextol.dextol.Doctor_profile;
+import com.dextol.dextol.Medical_Store_profile;
+import com.dextol.dextol.R;
+import com.dextol.dextol.Treatment_profile;
 
 public class MainPageFragment extends Fragment
 {

@@ -16,5 +16,19 @@ public class Medical_Store_profile extends Activity {
     }
 
 
+    public void sort(View view) {
+        LayoutInflater li=  (LayoutInflater)getSystemService(LAYOUT_INFLATER_SERVICE);
+        View v=li.inflate(R.layout.medical_list_style,null,false);
+        AlertDialog.Builder adb=new AlertDialog.Builder(this);
+        adb.setView(v);
+        AlertDialog ad=adb.create();
+        ad.show();
+    }
 
+    public void filter(View view)
+    {
+        Intent it=new Intent(this,Order_medicines.class);
+        startActivity(it);
+
+    }
 }

@@ -9,6 +9,8 @@
         android:layout_height="wrap_content"
         android:text="@string/add_family"
         android:textAllCaps="false"
+        android:paddingLeft="5dp"
+        style="@style/B_style"
         android:layout_margin="5dp"
         android:onClick="AddFamily"
         android:layout_gravity="end" />
