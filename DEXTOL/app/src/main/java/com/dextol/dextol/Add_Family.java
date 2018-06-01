@@ -14,9 +14,7 @@ public class Add_Family extends Activity
 {
 
 
-
-
-
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
