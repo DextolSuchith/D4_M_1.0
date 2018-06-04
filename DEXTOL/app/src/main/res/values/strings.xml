@@ -75,7 +75,7 @@
     <string name="filters">Filters</string>
     <string name="sort_by">Sort By</string>
     <string name="profile_type">Profile Type</string>
-
+    <string name="view_all">View All</string>
 
 
 </resources>

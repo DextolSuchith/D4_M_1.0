@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Family_Form_holder extends Activity {
+public class Family_Form_holder extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState)

@@ -28,11 +28,11 @@
         <activity android:name=".Medical_Store_profile" />
         <activity
             android:name=".Registration"
-            android:theme="@style/AppTheme.NoActionBar" />
+            />
         <activity
             android:name=".MainActivity"
             android:label="Dextol"
-            android:theme="@style/AppTheme.NoActionBar" />
+             />
         <activity android:name=".Add_Family" />
         <activity android:name=".Dashboard" />
         <activity android:name=".Appointments" />

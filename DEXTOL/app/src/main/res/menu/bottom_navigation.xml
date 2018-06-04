@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showin="navigation_view"
+
+    >
+
+
+
+        <item
+            android:id="@+id/idfamily"
+            android:icon="@drawable/family"
+            android:title="family"
+            />
+        <item
+            android:id="@+id/idappointment"
+            android:icon="@drawable/doctor"
+            android:title="Doctor"/>
+
+        <item
+            android:id="@+id/iddash"
+            android:icon="@drawable/dashboard"
+            android:title="Home"/>
+
+
+        <item
+            android:id="@+id/idfavourite"
+            android:icon="@drawable/favourite"
+            android:title="@string/favourite"/>
+
+
+        <item
+            android:id="@+id/idsettingsb_nav"
+            android:icon="@drawable/settings"
+            android:title="@string/settings"/>
+
+
+
+
+</menu>
