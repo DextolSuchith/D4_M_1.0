@@ -76,6 +76,7 @@
     <string name="sort_by">Sort By</string>
     <string name="profile_type">Profile Type</string>
     <string name="view_all">View All</string>
+    <string name="title_activity_view__all__specialization">View_All_Specialization</string>
 
 
 </resources>

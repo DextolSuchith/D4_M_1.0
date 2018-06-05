@@ -1,6 +1,7 @@
 package com.dextol.dextol.fragment;
 
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -14,24 +15,27 @@ import com.dextol.dextol.Doctor_profile;
 import com.dextol.dextol.Medical_Store_profile;
 import com.dextol.dextol.R;
 import com.dextol.dextol.Treatment_profile;
+import com.dextol.dextol.View_All_Specialization;
 
 public class MainPageFragment extends Fragment
 {
-    Button b1,b2,b3,b4;
-
+    Button b1,b2,b3,b4,b5;
+    View  v,v1;
 
     @Override
     public View onCreateView(final LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState)
     {
+
         // Inflate the layout for this fragment
         super.onCreateView(inflater, container, savedInstanceState);
-        View v = inflater.inflate(R.layout.main_page_fragment, container, false);
+         v = inflater.inflate(R.layout.main_page_fragment, container, false);
+
         b1=v.findViewById(R.id.b1docpf);
         b2=v.findViewById(R.id.b2dgnpf);
         b3=v.findViewById(R.id.b3mspf);
         b4=v.findViewById(R.id.b4treatpf);
-
+        b5=v.findViewById(R.id.b1view_all);
         b1.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -69,6 +73,16 @@ public class MainPageFragment extends Fragment
             {
                 Intent it=new Intent(getActivity(),Treatment_profile.class);
                 startActivity(it);
+            }
+        });
+        b5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+
+             Intent it=new Intent(getActivity(), View_All_Specialization.class);
+             startActivity(it);
+
             }
         });
 

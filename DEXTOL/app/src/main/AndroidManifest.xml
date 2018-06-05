@@ -26,13 +26,10 @@
         <activity android:name=".Diagnostics_profile" />
         <activity android:name=".Treatment_profile" />
         <activity android:name=".Medical_Store_profile" />
-        <activity
-            android:name=".Registration"
-            />
+        <activity android:name=".Registration" />
         <activity
             android:name=".MainActivity"
-            android:label="Dextol"
-             />
+            android:label="Dextol" />
         <activity android:name=".Add_Family" />
         <activity android:name=".Dashboard" />
         <activity android:name=".Appointments" />
@@ -44,6 +41,10 @@
         <activity android:name=".Family_Form_holder" />
         <activity android:name=".Doctor_Booking" />
         <activity android:name=".Order_medicines" />
+        <activity
+            android:name=".View_All_Specialization"
+            android:label="@string/title_activity_view__all__specialization"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

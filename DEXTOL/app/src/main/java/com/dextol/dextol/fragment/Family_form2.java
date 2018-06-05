@@ -1,13 +1,18 @@
 package com.dextol.dextol.fragment;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.dextol.dextol.R;
 
@@ -18,7 +23,7 @@ import com.dextol.dextol.R;
 public class Family_form2 extends Fragment
 {
 
-
+    Button b1,b2;
     String Country[]={"--Select Country-- "};
     String State[]={"--Select State-- "};
     String District[]={"--Select District-- "};
@@ -34,8 +39,8 @@ public class Family_form2 extends Fragment
                    sp1=v.findViewById(R.id.spcountry);
                 sp2=v.findViewById(R.id.spstate);
                 sp3=v.findViewById(R.id.spdistrict);
-
-
+        b1=v.findViewById(R.id.previous_b2);
+        b2=v.findViewById(R.id.register_form_b1);
 
          ArrayAdapter<String> a1=new ArrayAdapter<>(getContext(),android.R.layout.simple_dropdown_item_1line,Country);
          sp1.setAdapter(a1);
@@ -45,6 +50,24 @@ public class Family_form2 extends Fragment
 
           ArrayAdapter<String> a3=new ArrayAdapter<>(getContext(),android.R.layout.simple_dropdown_item_1line,District);
           sp3.setAdapter(a3);
+
+          b1.setOnClickListener(new View.OnClickListener()
+          {
+              @Override
+              public void onClick(View view)
+              {
+                  
+              }
+          });
+        b2.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                Toast.makeText(getContext(), "Family Form Saved", Toast.LENGTH_SHORT).show();
+            }
+        });
+
 
         return v;
     }

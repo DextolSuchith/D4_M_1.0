@@ -1,127 +1,214 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.dextol.dextol.fragment.serviceproviderFragment">
 
-    <LinearLayout
+        <LinearLayout
 
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center">
-        <EditText
-            android:id="@+id/spname"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="5dp"
-            android:layout_marginTop="45dp"
-            android:ems="15"
-            android:hint="@string/name" />
-        </android.support.design.widget.TextInputLayout>
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center">
-
-        <EditText
-            android:id="@+id/spmobile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="5dp"
-            android:ems="15"
-            android:hint="@string/mobile_no" />
-        </android.support.design.widget.TextInputLayout>
-
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center">
-        <EditText
-            android:id="@+id/spemail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="5dp"
-            android:ems="15"
-            android:hint="@string/email_address" />
-        </android.support.design.widget.TextInputLayout>
-
-
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="15dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="10dp">
-
-
-            <TableRow
+            <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp">
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp">
 
-                <CheckBox
-                    android:id="@+id/cb1"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:text="@string/doctor" />
 
-                <CheckBox
-                    android:id="@+id/cb2"
-                    android:layout_width="0dp"
+                <TableRow
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/diagnostics" />
+                    android:layout_margin="5dp">
 
-            </TableRow>
+                    <CheckBox
+                        android:id="@+id/cb1"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/doctor" />
 
-            <TableRow
+                    <CheckBox
+                        android:id="@+id/cb2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/diagnostics" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="5dp">
+
+                    <CheckBox
+                        android:id="@+id/cb3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/medical_stores" />
+
+                    <CheckBox
+                        android:id="@+id/cb4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/treatment_theraphy" />
+
+                </TableRow>
+
+
+            </TableLayout>
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/spdoctor"
                 android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginStart="25dp"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:visibility="gone">
+
+            </android.support.v7.widget.AppCompatSpinner>
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/spdiagnostic"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginEnd="25dp"
+
+                android:layout_marginStart="25dp"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:visibility="gone">
+
+            </android.support.v7.widget.AppCompatSpinner>
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/spmedical_store"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginStart="25dp"
+
+                android:gravity="center"
+                android:textAlignment="center"
+                android:visibility="gone">
+
+            </android.support.v7.widget.AppCompatSpinner>
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/sptreetment"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginStart="25dp"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:visibility="gone">
+
+            </android.support.v7.widget.AppCompatSpinner>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center">
+
+                <EditText
+                    android:id="@+id/spname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:ems="15"
+                    android:hint="@string/name" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center">
+
+                <EditText
+                    android:id="@+id/spmobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+
+                    android:ems="15"
+                    android:hint="@string/mobile_no" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center">
+
+                <EditText
+                    android:id="@+id/spemail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+
+                    android:ems="15"
+                    android:hint="@string/email_address" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center">
+
+                <EditText
+                    android:id="@+id/spconfirm_pwd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ems="15"
+                    android:hint="@string/password" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center">
+
+                <EditText
+                    android:id="@+id/sppassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+
+                    android:ems="15"
+                    android:hint="@string/confirm_password" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/spb1id"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp">
-
-                <CheckBox
-                    android:id="@+id/cb3"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/medical_stores" />
-
-                <CheckBox
-                    android:id="@+id/cb4"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/treatment_theraphy" />
-
-            </TableRow>
+                android:layout_gravity="center"
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:text="@string/generate_otp"
+                android:textAllCaps="false" />
 
 
-        </TableLayout>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-
-
-            android:ems="10"
-            android:text="@string/generate_otp"
-            android:textAllCaps="false" />
-
-
-    </LinearLayout>
+        </LinearLayout>
 
 </FrameLayout>
+</android.support.v4.widget.NestedScrollView>
