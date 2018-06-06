@@ -13,7 +13,7 @@
         <LinearLayout
 
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="555dp"
             android:orientation="vertical">
 
             <TableLayout
@@ -197,11 +197,12 @@
 
 
             <Button
-                android:id="@+id/spb1id"
+                android:id="@+id/sp_otp_gen_b1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginBottom="25dp"
+                android:background="@drawable/button_shape"
                 android:layout_marginTop="20dp"
                 android:ems="10"
                 android:text="@string/generate_otp"

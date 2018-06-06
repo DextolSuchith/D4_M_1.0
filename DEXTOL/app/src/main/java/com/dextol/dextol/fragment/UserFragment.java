@@ -7,8 +7,11 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.dextol.dextol.R;
@@ -47,12 +50,15 @@ public class UserFragment extends Fragment
           public void onClick(View view)
           {
 
-              View v1=inflater.inflate(R.layout.user_otp,container,false);
+             final View v1=inflater.inflate(R.layout.user_otp,container,false);
+
+              Animation fadein= AnimationUtils.loadAnimation(getContext(),R.anim.zoom_in);
+             v1.startAnimation(fadein);
 
               AlertDialog.Builder adb=new AlertDialog.Builder(getContext());
-              adb.setTitle("OTP Generation");
               adb.setView(v1);
               final AlertDialog ad=adb.create();
+
               ad.show();
 
 
@@ -62,6 +68,9 @@ public class UserFragment extends Fragment
                     @Override
                     public void onClick(View view)
                     {
+
+
+
                         Toast.makeText(getContext(), "OTP", Toast.LENGTH_SHORT).show();
                       ad.dismiss();
 

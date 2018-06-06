@@ -1,22 +1,23 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
+    android:id="@+id/update_user_ll"
     android:orientation="vertical">
-
 
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
         android:gravity="center">
+
         <EditText
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
             android:ems="15"
+            android:layout_margin="5dp"
             android:hint="@string/name"
             android:inputType="textPersonName" />
     </android.support.design.widget.TextInputLayout>
@@ -39,11 +40,11 @@
     </android.support.design.widget.TextInputLayout>
 
 
-
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center">
+
         <EditText
 
             android:layout_width="wrap_content"
@@ -57,19 +58,19 @@
 
     <Button
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="25dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="25dp"
-            android:ems="10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/button_shape"
+        android:ems="10"
+        android:text="@string/update"
+        android:textAllCaps="false" />
 
 
-            android:text="@string/update"
-            android:textAllCaps="false" />
-
-
-    </LinearLayout>
+</LinearLayout>
 
 
 

@@ -8,10 +8,10 @@
 
 
     <TextView
-        android:layout_marginTop="25dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="25dp"
+        android:layout_marginTop="25dp"
         android:text="VERIFY MOBILE NUMBER"
         android:textColor="@color/black"
         android:textSize="15dp" />
@@ -27,7 +27,7 @@
         />
 
     <EditText
-        android:id="@+id/otpet1"
+        android:id="@+id/serview_otp_et"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
@@ -48,28 +48,22 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
-
             android:text="didn't get otp?"
-
-            android:textAlignment="textEnd"
-
-            />
+            android:textAlignment="textEnd" />
 
         <Button
-            android:id="@+id/user_resend_otp"
+            android:id="@+id/service_resend_otp"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="wrap_content"
             android:layout_height="25dp"
             android:paddingTop="0dp"
             android:text="Resend"
-
             android:textAlignment="textStart"
             android:textAllCaps="false" />
     </LinearLayout>
 
     <Button
-        android:id="@+id/otpb1"
+        android:id="@+id/service_otp_b1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"

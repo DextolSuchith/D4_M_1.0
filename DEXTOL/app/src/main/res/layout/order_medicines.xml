@@ -42,7 +42,8 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="8"
+        android:ems="10"
+        android:background="@drawable/button_shape"
         android:layout_margin="10dp"
         android:textAllCaps="false"
         android:text="@string/order_now"/>

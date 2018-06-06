@@ -1,10 +1,13 @@
 package com.dextol.dextol.fragment;
 
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
@@ -34,7 +37,7 @@ public class serviceproviderFragment extends Fragment
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(final LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState)
     {
         // Inflate the layout for this fragment
@@ -44,7 +47,7 @@ public class serviceproviderFragment extends Fragment
         sp2=v.findViewById(R.id.spdiagnostic);
         sp3=v.findViewById(R.id.spmedical_store);
         sp4=v.findViewById(R.id.sptreetment);
-
+            b1=v.findViewById(R.id.sp_otp_gen_b1);
 
         ArrayAdapter<String> a11=new ArrayAdapter<>(getContext(),android.R.layout.simple_dropdown_item_1line,Diagnostics_medical);
 
@@ -56,7 +59,7 @@ public class serviceproviderFragment extends Fragment
         sp4.setAdapter(a11);
 
 
-          Button b1=v.findViewById(R.id.spb1id);
+          Button b1=v.findViewById(R.id.sp_otp_gen_b1);
           cb1=v.findViewById(R.id.cb1);
         cb2=v.findViewById(R.id.cb2);
         cb3=v.findViewById(R.id.cb3);
@@ -163,7 +166,6 @@ public class serviceproviderFragment extends Fragment
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
             {
-                Toast.makeText(getContext(),"___"+i, Toast.LENGTH_SHORT).show();
                 if(sp4.getSelectedItemPosition()==2)
                 {
                     cb2.setChecked(true);
@@ -185,6 +187,39 @@ public class serviceproviderFragment extends Fragment
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
 
+            }
+        });
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final View v1=inflater.inflate(R.layout.service_otp,container,false);
+
+                Animation fadein= AnimationUtils.loadAnimation(getContext(),R.anim.zoom_in);
+                v1.startAnimation(fadein);
+
+                AlertDialog.Builder adb=new AlertDialog.Builder(getContext());
+                adb.setView(v1);
+
+                final AlertDialog ad=adb.create();
+
+                ad.show();
+
+
+
+                Button b=v1.findViewById(R.id.service_otp_b1);
+                b.setOnClickListener(new View.OnClickListener()
+                {
+                    @Override
+                    public void onClick(View view)
+                    {
+
+
+
+                        Toast.makeText(getContext(), "OTP", Toast.LENGTH_SHORT).show();
+                        ad.dismiss();
+
+                    }
+                });
             }
         });
 

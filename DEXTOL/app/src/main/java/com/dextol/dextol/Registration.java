@@ -18,4 +18,11 @@ public class Registration extends AppCompatActivity
         setContentView(R.layout.activity_registration);
 
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.slide_from_left,R.anim.slide_to_right);
+
+    }
 }

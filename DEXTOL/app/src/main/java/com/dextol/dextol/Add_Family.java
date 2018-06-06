@@ -29,8 +29,9 @@ public class Add_Family extends Activity
     public void AddFamily(View view)
     {
 
-        Intent it=new Intent(this,Family_Form_holder.class);
+        Intent it=new Intent(this,Family_form1.class);
         startActivity(it);
+        overridePendingTransition(R.anim.slide_from_right,R.anim.slide_to_left);
 
 
 

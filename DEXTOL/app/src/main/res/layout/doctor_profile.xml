@@ -1,5 +1,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:id="@+id/doctor_profile_ll"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
@@ -28,12 +29,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="Sort"
+            android:background="@drawable/button_shape"
             android:layout_weight="1"
             android:textAllCaps="false"
             android:text="@string/sort_by"/>
         <Button
             android:layout_weight="1"
             android:text="@string/filters"
+            android:background="@drawable/button_shape"
             android:onClick="filter"
             android:textAllCaps="false"
             android:layout_width="wrap_content"

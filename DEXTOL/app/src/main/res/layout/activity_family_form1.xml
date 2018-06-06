@@ -1,11 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:background="@color/white"
-    android:layout_height="match_parent"
-    tools:context=".fragment.Family_form1">
-
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -18,13 +11,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center">
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="15"
-            android:layout_marginTop="10dp"
-            android:inputType="text"
-            android:hint="@string/name" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="15"
+                android:layout_marginTop="10dp"
+                android:inputType="text"
+                android:hint="@string/name" />
         </android.support.design.widget.TextInputLayout>
 
 
@@ -33,13 +26,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center">
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="15"
-            android:inputType="number"
-            android:maxLength="10"
-            android:hint="@string/mobile_no" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="15"
+                android:inputType="number"
+                android:maxLength="10"
+                android:hint="@string/mobile_no" />
         </android.support.design.widget.TextInputLayout>
 
 
@@ -48,12 +41,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center">
-        <EditText
-            android:inputType="textEmailAddress"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="15"
-            android:hint="@string/email_address" />
+            <EditText
+                android:inputType="textEmailAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="15"
+                android:hint="@string/email_address" />
         </android.support.design.widget.TextInputLayout>
 
 
@@ -155,7 +148,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:layout_margin="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
             style="@style/B_style"
             android:layout_marginBottom="10dp"
             android:text="@string/next"
@@ -164,4 +158,3 @@
 
     </LinearLayout>
 
-</FrameLayout>

@@ -14,8 +14,14 @@ public class View_All_Specialization extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view__all__specialization);
 
+
             }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.slide_from_right,R.anim.slide_to_left);
     }
+}
 
 

@@ -8,7 +8,7 @@
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:layout_gravity="left"
-
+        android:background="@drawable/button_shape"
         android:layout_margin="15dp"
         android:onClick="Upload"
         style="@style/B_style"

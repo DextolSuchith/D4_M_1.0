@@ -11,6 +11,8 @@
         android:textAllCaps="false"
         android:paddingLeft="5dp"
         style="@style/B_style"
+        android:ems="8"
+        android:background="@drawable/button_shape"
         android:layout_margin="5dp"
         android:onClick="AddFamily"
         android:layout_gravity="end" />

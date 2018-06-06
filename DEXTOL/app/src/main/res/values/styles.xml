@@ -17,6 +17,7 @@
         <item name="android:background">@color/lightGreen</item>
         <item name="android:drawableEnd">@drawable/buttton</item>
     </style>
+
     <style name="B_style_left">
         <item name="android:background">@color/lightGreen</item>
         <item name="android:drawableStart">@drawable/previous_button</item>

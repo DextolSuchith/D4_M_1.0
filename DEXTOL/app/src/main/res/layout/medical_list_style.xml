@@ -116,7 +116,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/order_now"
+        android:background="@drawable/button_shape"
         android:textAllCaps="false"
+        android:ems="8"
         android:layout_marginEnd="10dp"
         android:layout_gravity="end"/>
 
