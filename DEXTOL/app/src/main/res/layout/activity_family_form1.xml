@@ -150,7 +150,9 @@
             android:layout_gravity="end"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="10dp"
+            android:background="@drawable/button_shape"
             style="@style/B_style"
+            android:ems="8"
             android:layout_marginBottom="10dp"
             android:text="@string/next"
             android:textAllCaps="false" />

@@ -14,22 +14,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity android:name=".Home">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".Login" />
         <activity android:name=".Doctor_profile" />
         <activity android:name=".Diagnostics_profile" />
         <activity android:name=".Treatment_profile" />
         <activity android:name=".Medical_Store_profile" />
         <activity android:name=".Registration" />
-        <activity android:name=".MainActivity"
-                  android:label="Dextol" />
+        <activity
+            android:name=".MainActivity"
+            android:label="Dextol"
+            />
         <activity android:name=".Add_Family" />
         <activity android:name=".Dashboard" />
         <activity android:name=".Appointments" />
@@ -40,11 +41,10 @@
         <activity android:name=".Settings" />
         <activity android:name=".Doctor_Booking" />
         <activity android:name=".Order_medicines" />
-        <activity android:name=".View_All_Specialization"/>
-        <activity android:name=".Family_form1"/>
-        <activity android:name=".Family_Form2"/>
-
-
+        <activity android:name=".View_All_Specialization" />
+        <activity android:name=".Family_form1" />
+        <activity android:name=".Family_Form2" />
+        <activity android:name=".Bottom_nav1"></activity>
     </application>
 
 </manifest>

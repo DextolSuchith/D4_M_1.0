@@ -6,6 +6,9 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+
+
     </style>
 
 
@@ -13,19 +16,22 @@
         <item name="android:background">@color/white</item>
     </style>
 
+
+
+
     <style name="B_style">
-        <item name="android:background">@color/lightGreen</item>
+        <item name="android:background">@drawable/button_shape</item>
         <item name="android:drawableEnd">@drawable/buttton</item>
     </style>
 
     <style name="B_style_left">
-        <item name="android:background">@color/lightGreen</item>
+        <item name="android:background">@drawable/button_shape</item>
         <item name="android:drawableStart">@drawable/previous_button</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <!--<style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />-->
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <!--<style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />-->
 
 
 </resources>

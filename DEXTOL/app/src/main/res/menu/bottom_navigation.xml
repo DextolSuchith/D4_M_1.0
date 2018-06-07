@@ -8,29 +8,29 @@
 
 
         <item
-            android:id="@+id/idfamily"
+            android:id="@+id/btm_nav1"
             android:icon="@drawable/family"
             android:title="family"
             />
         <item
-            android:id="@+id/idappointment"
+            android:id="@+id/btm_nav2"
             android:icon="@drawable/doctor"
             android:title="Doctor"/>
 
         <item
-            android:id="@+id/iddash"
+            android:id="@+id/btm_nav3"
             android:icon="@drawable/dashboard"
             android:title="Home"/>
 
 
         <item
-            android:id="@+id/idfavourite"
+            android:id="@+id/btm_nav4"
             android:icon="@drawable/favourite"
             android:title="@string/favourite"/>
 
 
         <item
-            android:id="@+id/idsettingsb_nav"
+            android:id="@+id/ibtm_nav5"
             android:icon="@drawable/settings"
             android:title="@string/settings"/>
 

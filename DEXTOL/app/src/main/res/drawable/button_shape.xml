@@ -1,18 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <stroke android:width="2dp"
-        android:color="#FFFFFF"/>
+    <item android:state_pressed="true" >
+      <shape>
+         <solid
+             android:color="#f4ec0c" />
+         <corners
+             android:radius="40dp" />
+         </shape>
+    </item>
 
-    <gradient
-        android:angle="225"
-        android:startColor="#dd2efae9"
-        android:endColor="#dd0a5791"/>
+    
 
-    <corners
-        android:bottomLeftRadius="40dp"
-        android:bottomRightRadius="40dp"
-        android:topLeftRadius="40dp"
-        android:topRightRadius="40dp" />
+    <item>
+     <shape>
+         <solid
+                android:color="#25c8d4" />
 
-</shape>
+            <corners
+                android:radius="40dp" />
+        </shape>
+    </item>
+</selector>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<shape xmlns:android="http://schemas.android.com/apk/res/android" >-->
+
+    <!--<stroke android:width="2dp"-->
+    <!--android:color="#FFFFFF"/>-->
+
+    <!--<gradient-->
+    <!--android:angle="225"-->
+    <!--android:startColor="#dd2efae9"-->
+    <!--android:endColor="#dd0a5791"/>-->
+
+    <!--<corners-->
+    <!--android:bottomLeftRadius="40dp"-->
+    <!--android:bottomRightRadius="40dp"-->
+    <!--android:topLeftRadius="40dp"-->
+    <!--android:topRightRadius="40dp" />-->
+
+    <!--</shape>-->
