@@ -53,7 +53,9 @@
                 <android.support.v7.widget.SearchView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginStart="5dp"
                     android:clickable="true"
                     android:focusable="true"
                     android:iconifiedByDefault="false"
@@ -73,7 +75,7 @@
                             android:layout_width="0dp"
                             android:layout_height="110dp"
                             android:layout_weight="1"
-                            android:layout_margin="5dp"
+                            android:layout_margin="2.5dp"
                             >
 
                             <LinearLayout
@@ -106,7 +108,7 @@
                             android:layout_width="0dp"
                             android:layout_height="110dp"
                             android:layout_weight="1"
-                            android:layout_margin="5dp"  >
+                            android:layout_margin="2.5dp"  >
 
 
                             <LinearLayout
@@ -140,7 +142,7 @@
                             android:layout_width="0dp"
                             android:layout_height="110dp"
                             android:layout_weight="1"
-                            android:layout_margin="5dp"  >
+                            android:layout_margin="2.5dp"  >
 
 
                             <LinearLayout
@@ -170,7 +172,7 @@
                             android:layout_width="0dp"
                             android:layout_height="110dp"
                             android:layout_weight="1"
-                            android:layout_margin="5dp"  >
+                            android:layout_margin="2.5dp"  >
 
 
                             <LinearLayout
@@ -205,6 +207,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:ems="10"
+                    android:layout_marginTop="5dp"
                     android:padding="5dp"
                     android:textColor="@color/black"
 
@@ -486,8 +489,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:focusable="false"
-                        android:focusableInTouchMode="false"
-                        android:defaultFocusHighlightEnabled="false"
                         android:elevation="15dp"
                         android:layout_gravity="bottom"
                         android:background="@color/lightGreen"
