@@ -1,9 +1,12 @@
-package com.dextol.dextol;
+package com.dextol.dextol.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
-public class Consultation extends Activity {
+import com.dextol.dextol.R;
+
+public class Consultation extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState)

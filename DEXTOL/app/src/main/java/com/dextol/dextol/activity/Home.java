@@ -1,16 +1,15 @@
-package com.dextol.dextol;
+package com.dextol.dextol.activity;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 
-import com.dextol.dextol.activity.Slide_animation;
+import com.dextol.dextol.R;
+
 
 public class Home extends Activity {
 ImageView ll;

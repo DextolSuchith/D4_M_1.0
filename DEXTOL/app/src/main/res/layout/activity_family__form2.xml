@@ -3,6 +3,7 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:scrollbars="vertical"
+    android:id="@+id/ff2_sv"
     android:scrollbarFadeDuration="800"
     android:scrollbarSize="10dp"
 
@@ -18,7 +19,7 @@
 
 
             <ImageView
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:src="@drawable/ic_menu_camera" />
@@ -33,7 +34,8 @@
                 android:id="@+id/spcountry"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
+                android:focusable="true"
+                android:focusedByDefault="true"
                 android:layout_marginEnd="25dp"
                 android:layout_marginStart="25dp">
 
@@ -153,6 +155,7 @@
                             android:text="Previous"
                             android:background="@drawable/button_shape"
                             android:layout_margin="5dp"
+                            android:ems="8"
                             android:paddingRight="8dp"
                             style="@style/B_style_left"
                             android:layout_gravity="start"
@@ -170,7 +173,7 @@
                             android:id="@+id/register_form_b1"
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
-                            android:ems="10"
+                            android:ems="8"
                             android:background="@drawable/button_shape"
                             style="@style/B_style"
                             android:layout_margin="5dp"

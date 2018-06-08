@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/frag_b_nav1"
+    android:layout_height="match_parent"
+    android:background="@color/Green"
+    tools:context=".fragment.Bottom_nav_Fragment">
+
+
+
+</FrameLayout>

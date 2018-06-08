@@ -1,16 +1,15 @@
-package com.dextol.dextol;
+package com.dextol.dextol.activity;
 
+import android.support.v7.app.ActionBar;
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.Spinner;
 
-public class Add_Family extends Activity
+import com.dextol.dextol.R;
+
+public class Add_Family extends AppCompatActivity
 {
 
 
@@ -23,6 +22,8 @@ public class Add_Family extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add__family);
 
+        ActionBar acb=getSupportActionBar();
+        acb.setTitle("Family Form");
 
     }
 

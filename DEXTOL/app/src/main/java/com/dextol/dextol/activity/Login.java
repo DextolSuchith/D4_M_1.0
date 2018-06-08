@@ -1,19 +1,17 @@
-package com.dextol.dextol;
+package com.dextol.dextol.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 
-import android.support.transition.Fade;
 import android.support.v7.app.AppCompatActivity ;
-import android.transition.Slide;
-import android.transition.TransitionInflater;
-import android.transition.Transition;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+
+import com.dextol.dextol.R;
 
 public class Login extends AppCompatActivity {
 

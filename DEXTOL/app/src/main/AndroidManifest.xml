@@ -10,41 +10,77 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:label=" Dextol"
+
         android:theme="@style/AppTheme">
-        <activity android:name=".Home">
+        <activity android:name=".activity.Home">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Login" />
-        <activity android:name=".Doctor_profile" />
-        <activity android:name=".Diagnostics_profile" />
-        <activity android:name=".Treatment_profile" />
-        <activity android:name=".Medical_Store_profile" />
-        <activity android:name=".Registration" />
-        <activity
-            android:name=".MainActivity"
-            android:label="Dextol"
+        <activity android:name=".activity.Login"
+             />
+        <activity android:name=".activity.Doctor_profile"
+            android:parentActivityName=".activity.MainActivity"/>
+
+        <activity android:name=".activity.Diagnostics_profile"
+            android:parentActivityName=".activity.MainActivity"/>
+
+        <activity android:name=".activity.Treatment_profile"
+            android:parentActivityName=".activity.MainActivity"/>
+
+        <activity android:name=".activity.Medical_Store_profile"
+            android:parentActivityName=".activity.MainActivity"/>
+
+        <activity android:name=".activity.Registration"
+            android:theme="@style/NoActionBar"
             />
-        <activity android:name=".Add_Family" />
-        <activity android:name=".Dashboard" />
-        <activity android:name=".Appointments" />
-        <activity android:name=".Consultation" />
-        <activity android:name=".Orders" />
-        <activity android:name=".Favourites" />
-        <activity android:name=".Medical_Reports" />
-        <activity android:name=".Settings" />
-        <activity android:name=".Doctor_Booking" />
-        <activity android:name=".Order_medicines" />
-        <activity android:name=".View_All_Specialization" />
-        <activity android:name=".Family_form1" />
-        <activity android:name=".Family_Form2" />
-        <activity android:name=".Bottom_nav1"></activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="Dextol"
+            android:theme="@style/NoActionBar"
+            />
+        <activity android:name=".activity.Add_Family"
+            android:parentActivityName=".activity.MainActivity"/>
+
+        <activity android:name=".activity.Dashboard"
+            android:parentActivityName=".activity.MainActivity"/>
+
+        <activity android:name=".activity.Appointments"
+            android:parentActivityName=".activity.MainActivity"/>
+
+        <activity android:name=".activity.Consultation"
+            android:parentActivityName=".activity.MainActivity"/>
+
+        <activity android:name=".activity.Orders"
+            android:parentActivityName=".activity.MainActivity"/>
+
+        <activity android:name=".activity.Favourites"
+            android:parentActivityName=".activity.MainActivity"/>
+
+        <activity android:name=".activity.Medical_Reports"
+            android:parentActivityName=".activity.MainActivity"/>
+
+        <activity android:name=".activity.Settings"
+            android:parentActivityName=".activity.MainActivity"/>
+
+        <activity android:name=".activity.Doctor_Booking" />
+
+        <activity android:name=".activity.Order_medicines" />
+
+        <activity android:name=".activity.View_All_Specialization" />
+
+        <activity android:name=".activity.Family_form1"
+            android:parentActivityName=".activity.Add_Family"
+            android:label="Personal Details"/>
+
+        <activity android:name=".activity.Family_Form2"
+            android:parentActivityName=".activity.Family_Form2"
+            android:label="Postal Address"/>
     </application>
 
 </manifest>

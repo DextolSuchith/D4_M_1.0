@@ -16,7 +16,6 @@ import android.widget.Button;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.dextol.dextol.Diagnostics_profile;
 import com.dextol.dextol.R;
 
 

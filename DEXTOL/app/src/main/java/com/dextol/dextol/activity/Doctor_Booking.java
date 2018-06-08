@@ -1,17 +1,20 @@
-package com.dextol.dextol;
+package com.dextol.dextol.activity;
 
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.dextol.dextol.R;
+
 import java.util.Calendar;
 
-public class Doctor_Booking extends Activity {
+public class Doctor_Booking extends AppCompatActivity {
     String A_type[]={"--Select Appointment Type--","Online","Walkin","Home Visit"};
 TextView tv;
 Spinner sp1;

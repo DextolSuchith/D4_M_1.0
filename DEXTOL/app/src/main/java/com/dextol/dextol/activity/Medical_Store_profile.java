@@ -1,16 +1,17 @@
-package com.dextol.dextol;
+package com.dextol.dextol.activity;
 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
 
-public class Medical_Store_profile extends Activity
+import com.dextol.dextol.R;
+
+public class Medical_Store_profile extends AppCompatActivity
 {
 LinearLayout ll;
     @Override

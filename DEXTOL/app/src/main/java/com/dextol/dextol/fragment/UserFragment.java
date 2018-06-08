@@ -24,17 +24,10 @@ public class UserFragment extends Fragment
 {
 
     Button b1;
-
-
-
-
-
     public UserFragment()
     {
         // Required empty public constructor
     }
-
-
     @Override
     public View onCreateView(final LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState)
@@ -78,24 +71,6 @@ public class UserFragment extends Fragment
                 });
           }
       });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
