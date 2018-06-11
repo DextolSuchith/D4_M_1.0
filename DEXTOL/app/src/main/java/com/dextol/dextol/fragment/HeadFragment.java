@@ -18,35 +18,27 @@ import com.dextol.dextol.R;
  */
 public class HeadFragment extends Fragment
 {
-    Button b1,b2;
-
-
-//
-//    public HeadFragment()
-//    {
-//        // Required empty public constructor
-//    }
-
+    Button b1, b2;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState)
     {
-        super.onCreateView(inflater,container,savedInstanceState);
+        super.onCreateView(inflater, container, savedInstanceState);
         // Inflate the layout for this fragment
-        View v=inflater.inflate(R.layout.fragment_head, container, false);
+        View v = inflater.inflate(R.layout.fragment_head, container, false);
 
 
-       b1= v.findViewById(R.id.userreg);
-       b2=v.findViewById(R.id.servicereg);
+        b1 = v.findViewById(R.id.userreg);
+        b2 = v.findViewById(R.id.servicereg);
         b1.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
-                FragmentManager fm=getFragmentManager();
-                FragmentTransaction ft=fm.beginTransaction();
-                ft.add(R.id.userf2,new UserFragment());
+                FragmentManager fm = getFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                ft.add(R.id.userf2, new UserFragment());
                 ft.commit();
 
             }
@@ -56,19 +48,16 @@ public class HeadFragment extends Fragment
             @Override
             public void onClick(View view)
             {
-                FragmentManager fm=getFragmentManager();
-                FragmentTransaction ft=fm.beginTransaction();
-                ft.add(R.id.userf2,new serviceproviderFragment());
+                FragmentManager fm = getFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                ft.add(R.id.userf2, new serviceproviderFragment());
                 ft.commit();
-
 
             }
         });
 
 
-
-
-        return  v;
+        return v;
 
     }
 

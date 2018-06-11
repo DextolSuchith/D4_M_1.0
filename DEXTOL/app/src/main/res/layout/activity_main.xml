@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:scrollbars="vertical"
-
+    android:scrollbarSize="15dp"
     tools:context=".activity.MainActivity"
     tools:openDrawer="start">
 

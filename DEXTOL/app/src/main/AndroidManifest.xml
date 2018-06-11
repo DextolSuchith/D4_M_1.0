@@ -68,11 +68,15 @@
         <activity android:name=".activity.Settings"
             android:parentActivityName=".activity.MainActivity"/>
 
-        <activity android:name=".activity.Doctor_Booking" />
+        <activity android:name=".activity.Doctor_Booking"
+            android:parentActivityName=".activity.Doctor_profile"/>
 
-        <activity android:name=".activity.Order_medicines" />
+        <activity android:name=".activity.Order_medicines"
+            android:parentActivityName=".activity.MainActivity"/>
 
-        <activity android:name=".activity.View_All_Specialization" />
+        <activity android:name=".activity.View_All_Specialization"
+            android:parentActivityName=".activity.MainActivity"/>
+
 
         <activity android:name=".activity.Family_form1"
             android:parentActivityName=".activity.Add_Family"

@@ -11,7 +11,8 @@ import android.widget.LinearLayout;
 
 import com.dextol.dextol.R;
 
-public class Diagnostics_profile extends AppCompatActivity {
+public class Diagnostics_profile extends AppCompatActivity
+{
 LinearLayout ll;
     @Override
     protected void onCreate(Bundle savedInstanceState)

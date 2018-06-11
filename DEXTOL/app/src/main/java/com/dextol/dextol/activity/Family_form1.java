@@ -15,33 +15,35 @@ import com.dextol.dextol.R;
 
 public class Family_form1 extends AppCompatActivity
 {
-    String Gender[]={"--Select Gender-- ","Male","Female","Others"};
-    String Relation[]={"--Select Relation-- ","Father","Mother","Brother","Sister"};
-    String Blood[]={"--Select Blood Group-- ","A+","A-","B+","B-","AB+","AB-","O+","O-"};
-    Spinner sp1,sp2,sp3;
+
+    String Gender[] = {"--Select Gender-- ", "Male", "Female", "Others"};
+    String Relation[] = {"--Select Relation-- ", "Father", "Mother", "Brother", "Sister"};
+    String Blood[] = {"--Select Blood Group-- ", "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"};
+    Spinner sp1, sp2, sp3;
     Button b1;
     LinearLayout ll;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_family_form1);
 
-        sp1=findViewById(R.id.spgender);
-        sp2=findViewById(R.id.sprelation);
-        sp3=findViewById(R.id.spblood);
-        b1=findViewById(R.id.alertb1);
-        ll=(LinearLayout)findViewById(R.id.ff1_ll);
-        ArrayAdapter<String> a1=new ArrayAdapter<>(this,android.R.layout.simple_dropdown_item_1line,Gender);
+        sp1 = findViewById(R.id.spgender);
+        sp2 = findViewById(R.id.sprelation);
+        sp3 = findViewById(R.id.spblood);
+        b1 = findViewById(R.id.alertb1);
+        ll = (LinearLayout) findViewById(R.id.ff1_ll);
+        ArrayAdapter<String> a1 = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, Gender);
         sp1.setAdapter(a1);
 
-        ArrayAdapter<String> a2=new ArrayAdapter<>(this,android.R.layout.simple_dropdown_item_1line,Relation);
+        ArrayAdapter<String> a2 = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, Relation);
         sp2.setAdapter(a2);
 
-        ArrayAdapter<String> a3=new ArrayAdapter<>(this,android.R.layout.simple_dropdown_item_1line,Blood);
+        ArrayAdapter<String> a3 = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, Blood);
         sp3.setAdapter(a3);
 
-        Animation fadein= AnimationUtils.loadAnimation(this,R.anim.zoom_in);
+        Animation fadein = AnimationUtils.loadAnimation(this, R.anim.zoom_in);
         ll.startAnimation(fadein);
 
         b1.setOnClickListener(new View.OnClickListener()
@@ -51,9 +53,9 @@ public class Family_form1 extends AppCompatActivity
             public void onClick(View view)
             {
 
-               Intent it=new Intent(Family_form1.this,Family_Form2.class);
-               startActivity(it);
-                overridePendingTransition(R.anim.slide_from_right,R.anim.slide_to_left);
+                Intent it = new Intent(Family_form1.this, Family_Form2.class);
+                startActivity(it);
+                overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
                 finish();
 
 
@@ -67,7 +69,7 @@ public class Family_form1 extends AppCompatActivity
     {
         super.onBackPressed();
         finish();
-        overridePendingTransition(R.anim.slide_from_left,R.anim.slide_to_right);
+        overridePendingTransition(R.anim.slide_from_left, R.anim.slide_to_right);
 
     }
 }

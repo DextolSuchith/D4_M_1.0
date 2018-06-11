@@ -6,43 +6,55 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent">
 
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:background="@null"
-        android:drawableEnd="@drawable/notes"
-        android:textAllCaps="false"
-        android:text="@string/upload_prescription"/>
 
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
         android:gravity="center">
     <EditText
+        android:id="@+id/order_medic_medic_req"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:layout_margin="5dp"
         android:hint="@string/enter_medicine_required"/>
     </android.support.design.widget.TextInputLayout>
 
     <RadioButton
+        android:id="@+id/order_medic_rb1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
         android:ems="10"
         android:text="@string/home_delivery"/>
 
     <RadioButton
+        android:layout_margin="5dp"
+        android:id="@+id/order_medic_rb2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:text="@string/walkin"/>
+
     <Button
+        android:id="@+id/btn_order_medic_upload"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
+        android:ems="12"
+        android:textSize="14dp"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/button_shape"
+        android:drawableEnd="@drawable/notes"
+        android:textAllCaps="false"
+        android:text="@string/upload_prescription"/>
+
+    <Button
+        android:id="@+id/btn_order_medic_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="12"
         android:background="@drawable/button_shape"
         android:layout_margin="10dp"
         android:textAllCaps="false"

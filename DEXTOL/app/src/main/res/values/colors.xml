@@ -12,6 +12,7 @@
 
     <color name="black">#000000</color>
 
+    <color name="layout">#72f5e6</color>
 
     <color name="nav_white">#ffffff</color>
     <color name="nav_white_trfanspatent">#00ffffff</color>

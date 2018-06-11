@@ -45,7 +45,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private ActionBarDrawerToggle drawerToggle;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -57,18 +58,23 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-        if (savedInstanceState == null) {
+
+        if (savedInstanceState == null)
+        {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new Main_Fragment()).commit();
             //nvDrawer.setCheckedItem(R.id.);
         }
-        btm_nav = findViewById(R.id.b_nav);
-        btm_nav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener()
 
+        btm_nav = findViewById(R.id.b_nav);
+
+        btm_nav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener()
         {
             @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
+            public boolean onNavigationItemSelected(@NonNull MenuItem item)
+            {
+                switch (item.getItemId())
+                {
                     case R.id.btm_nav1:
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                                 new Main_Fragment()).commit();
@@ -101,8 +107,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     //navigation drawer//
     @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
+    public boolean onNavigationItemSelected(@NonNull MenuItem item)
+    {
+        switch (item.getItemId())
+        {
 
             case R.id.idfamily:
                 Intent it = new Intent(this, Add_Family.class);
@@ -157,31 +165,29 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
     @Override
-    public void onBackPressed() {
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
+    public void onBackPressed()
+    {
+        if (drawer.isDrawerOpen(GravityCompat.START))
+        {
             drawer.closeDrawer(GravityCompat.START);
-        } else {
-
-            super.onBackPressed();
-            overridePendingTransition(R.anim.slide_from_left, R.anim.slide_to_right);
-        }
-
-
-    }
-
-    protected void pushFragment(Fragment fragment) {
-        if (fragment == null)
-            return;
-
-        FragmentManager fragmentManager = getFragmentManager();
-        if (fragmentManager != null) {
-            FragmentTransaction ft = fragmentManager.beginTransaction();
-            if (ft != null) {
-                ft.replace(R.id.fragment_container, fragment);
-                ft.commit();
+        } else
+            {
+              super.onBackPressed();
+              overridePendingTransition(R.anim.slide_from_left, R.anim.slide_to_right);
             }
-        }
-
 
     }
 }
+//    protected void pushFragment(Fragment fragment) {
+//        if (fragment == null)
+//            return;
+//
+//        FragmentManager fragmentManager = getFragmentManager();
+//        if (fragmentManager != null) {
+//            FragmentTransaction ft = fragmentManager.beginTransaction();
+//            if (ft != null) {
+//                ft.replace(R.id.fragment_container, fragment);
+//                ft.commit();
+
+
+

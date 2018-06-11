@@ -5,7 +5,7 @@
     android:scrollbars="vertical"
     android:id="@+id/ff2_sv"
     android:scrollbarFadeDuration="800"
-    android:scrollbarSize="10dp"
+    android:scrollbarSize="15dp"
 
     xmlns:android="http://schemas.android.com/apk/res/android">
 
@@ -19,7 +19,7 @@
 
 
             <ImageView
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:src="@drawable/ic_menu_camera" />
@@ -30,37 +30,33 @@
 
                 android:text="@string/click_here_to_take_picture" />
 
-            <android.support.v7.widget.AppCompatSpinner
-                android:id="@+id/spcountry"
+
+
+
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:focusable="true"
-                android:focusedByDefault="true"
-                android:layout_marginEnd="25dp"
-                android:layout_marginStart="25dp">
+                android:gravity="center">
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="15"
+                    android:layout_margin="5dp"
+                    android:hint="@string/password" />
+            </android.support.design.widget.TextInputLayout>
 
-            </android.support.v7.widget.AppCompatSpinner>
-
-
-            <android.support.v7.widget.AppCompatSpinner
-                android:id="@+id/spstate"
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center">
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="15"
+                    android:layout_margin="5dp"
+                    android:hint="@string/confirm_password" />
 
-                android:layout_marginEnd="25dp"
-                android:layout_marginStart="25dp">
-
-            </android.support.v7.widget.AppCompatSpinner>
-
-            <android.support.v7.widget.AppCompatSpinner
-                android:id="@+id/spdistrict"
-
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="25dp"
-                android:layout_marginStart="25dp">
-
-            </android.support.v7.widget.AppCompatSpinner>
+            </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
@@ -74,7 +70,6 @@
                     android:hint="@string/city"
                     android:inputType="text" />
             </android.support.design.widget.TextInputLayout>
-
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
@@ -91,8 +86,6 @@
 
             </android.support.design.widget.TextInputLayout>
 
-
-
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -108,32 +101,44 @@
             </android.support.design.widget.TextInputLayout>
 
 
-            <android.support.design.widget.TextInputLayout
+
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/spdistrict"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center">
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="15"
-                    android:layout_margin="5dp"
-                    android:hint="@string/password" />
-            </android.support.design.widget.TextInputLayout>
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp">
 
+            </android.support.v7.widget.AppCompatSpinner>
 
-
-            <android.support.design.widget.TextInputLayout
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/spstate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center">
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="15"
-                    android:layout_margin="5dp"
-                    android:hint="@string/confirm_password" />
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp">
 
-            </android.support.design.widget.TextInputLayout>
+            </android.support.v7.widget.AppCompatSpinner>
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/spcountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusedByDefault="true"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp">
+
+            </android.support.v7.widget.AppCompatSpinner>
+
+
+
+
+
+
+
 
             <TableLayout
                 android:layout_width="match_parent"

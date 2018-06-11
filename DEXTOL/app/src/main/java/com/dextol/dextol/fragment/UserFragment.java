@@ -21,61 +21,55 @@ import com.dextol.dextol.R;
  * A simple {@link Fragment} subclass.
  */
 public class UserFragment extends Fragment
-{
 
+{
     Button b1;
+
     public UserFragment()
     {
         // Required empty public constructor
     }
+
     @Override
     public View onCreateView(final LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState)
     {
         // Inflate the layout for this fragment
-        super.onCreateView(inflater,container,savedInstanceState);
-        View v=inflater.inflate(R.layout.fragment_user, container, false);
+        super.onCreateView(inflater, container, savedInstanceState);
+        View v = inflater.inflate(R.layout.fragment_user, container, false);
 
-        b1=  v.findViewById(R.id.urb1);
-      b1.setOnClickListener(new View.OnClickListener()
-      {
-          @Override
-          public void onClick(View view)
-          {
+        b1 = v.findViewById(R.id.urb1);
+        b1.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
 
-             final View v1=inflater.inflate(R.layout.user_otp,container,false);
+                final View v1 = inflater.inflate(R.layout.user_otp, container, false);
 
-              Animation fadein= AnimationUtils.loadAnimation(getContext(),R.anim.zoom_in);
-             v1.startAnimation(fadein);
+                Animation fadein = AnimationUtils.loadAnimation(getContext(), R.anim.zoom_in);
+                v1.startAnimation(fadein);
 
-              AlertDialog.Builder adb=new AlertDialog.Builder(getContext());
-              adb.setView(v1);
-              final AlertDialog ad=adb.create();
+                AlertDialog.Builder adb = new AlertDialog.Builder(getContext());
+                adb.setView(v1);
+                final AlertDialog ad = adb.create();
 
-              ad.show();
+                ad.show();
 
 
-                Button b=v1.findViewById(R.id.otpb1);
+                Button b = v1.findViewById(R.id.otpb1);
                 b.setOnClickListener(new View.OnClickListener()
                 {
                     @Override
                     public void onClick(View view)
                     {
-
-
-
                         Toast.makeText(getContext(), "OTP", Toast.LENGTH_SHORT).show();
-                      ad.dismiss();
+                        ad.dismiss();
 
                     }
                 });
-          }
-      });
-
-
-
-
-
+            }
+        });
 
 
         return v;

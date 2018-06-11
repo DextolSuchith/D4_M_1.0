@@ -6,7 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.dextol.dextol.R;
 
-public class Appointments extends AppCompatActivity {
+public class Appointments extends AppCompatActivity
+{
 
     @Override
     protected void onCreate(Bundle savedInstanceState)

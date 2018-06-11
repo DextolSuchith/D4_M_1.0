@@ -3,16 +3,20 @@
     android:orientation="vertical"
     style="@style/background"
     android:gravity="center"
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    >
 
 
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
         android:layout_height="wrap_content"
         android:gravity="center">
 
         <EditText
+            android:id="@+id/medic_rcrd_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -25,6 +29,7 @@
         android:layout_height="wrap_content"
         android:gravity="center">
     <EditText
+        android:id="@+id/medic_rcrd_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -37,6 +42,7 @@
         android:layout_height="wrap_content"
         android:gravity="center">
     <EditText
+        android:id="@+id/medic_rcrd_desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -44,18 +50,24 @@
     </android.support.design.widget.TextInputLayout>
 
     <Button
+        android:id="@+id/medic_upload_prescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
+        android:ems="12"
+        android:padding="5dp"
+        android:textSize="12dp"
+        android:background="@drawable/button_shape"
         android:drawableEnd="@drawable/notes"
         android:textAllCaps="false"
         android:layout_margin="10dp"
         android:text="@string/upload_prescription"/>
 
     <Button
+        android:id="@+id/btn_add_medic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/button_shape"
         android:textAllCaps="false"
         android:text="@string/submit"/>

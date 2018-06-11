@@ -13,7 +13,8 @@ import com.dextol.dextol.R;
 
 public class Treatment_profile extends AppCompatActivity
 {
-LinearLayout ll;
+    LinearLayout ll;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -21,7 +22,6 @@ LinearLayout ll;
         setContentView(R.layout.treatment_profile);
 
     }
-
 
 
 }

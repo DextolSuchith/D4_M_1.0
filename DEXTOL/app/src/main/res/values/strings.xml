@@ -80,6 +80,16 @@
     <string name="title_activity_family_form1">Family_form1</string>
     <string name="title_activity_family__form2">Family_Form2</string>
     <string name="forgot_password">Forgot Password?</string>
+    <string name="dermatology">Dermatology</string>
+    <string name="orthopedics">Orthopedics</string>
+    <string name="gynacology">Gynacology</string>
+    <string name="ent">ENT</string>
+    <string name="pulmonology">Pulmonology</string>
+    <string name="urology">Urology</string>
+    <string name="general_physician">General Physician</string>
+    <string name="discount">Discount</string>
+    <string name="availability">Availability</string>
+
 
 
 </resources>

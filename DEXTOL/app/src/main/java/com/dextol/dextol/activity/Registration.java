@@ -11,8 +11,6 @@ import com.dextol.dextol.R;
 public class Registration extends AppCompatActivity
 {
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -22,9 +20,10 @@ public class Registration extends AppCompatActivity
     }
 
     @Override
-    public void onBackPressed() {
+    public void onBackPressed()
+    {
         super.onBackPressed();
-        overridePendingTransition(R.anim.slide_from_left,R.anim.slide_to_right);
+        overridePendingTransition(R.anim.slide_from_left, R.anim.slide_to_right);
 
     }
 }
