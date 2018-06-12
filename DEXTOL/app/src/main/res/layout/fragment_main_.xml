@@ -2,7 +2,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:scrollbarSize="15dp"
-
+    android:id="@+id/search_bar"
     android:scrollbars="none">
 
     <LinearLayout

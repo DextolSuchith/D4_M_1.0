@@ -60,6 +60,8 @@ public class Main_Fragment extends Fragment
         iv8 = v.findViewById(R.id.general_img);
 
 
+
+
         Animation fadein = AnimationUtils.loadAnimation(getContext(), R.anim.zoom_in);
         ll.startAnimation(fadein);
 

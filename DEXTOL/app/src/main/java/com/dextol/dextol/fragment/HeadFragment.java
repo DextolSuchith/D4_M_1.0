@@ -38,6 +38,7 @@ public class HeadFragment extends Fragment
             {
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
+                ft.setCustomAnimations(R.anim.slide_from_right,R.anim.slide_to_right,R.anim.slide_from_left,R.anim.slide_to_left);
                 ft.add(R.id.userf2, new UserFragment());
                 ft.commit();
 
@@ -50,6 +51,7 @@ public class HeadFragment extends Fragment
             {
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
+                ft.setCustomAnimations(R.anim.slide_from_right,R.anim.slide_to_right,R.anim.slide_from_left,R.anim.slide_to_left);
                 ft.add(R.id.userf2, new serviceproviderFragment());
                 ft.commit();
 

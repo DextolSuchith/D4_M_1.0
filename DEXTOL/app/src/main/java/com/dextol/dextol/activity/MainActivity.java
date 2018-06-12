@@ -1,15 +1,14 @@
 package com.dextol.dextol.activity;
 
 
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
-import android.app.Fragment;
+import android.app.Activity;
+import android.support.v4.app.FragmentManager;
 import android.content.Intent;
+import android.graphics.PointF;
 import android.support.annotation.NonNull;
-
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.NavigationView;
-
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -17,20 +16,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.Toast;
-
 import com.dextol.dextol.R;
 import com.dextol.dextol.fragment.Bottom_nav_Fragment;
+import com.dextol.dextol.fragment.Bottom_nav_Fragment_1;
+import com.dextol.dextol.fragment.Bottom_nav_Fragment_2;
+import com.dextol.dextol.fragment.Bottom_nav_Fragment_3;
 import com.dextol.dextol.fragment.Main_Fragment;
+import ru.dimorinny.showcasecard.ShowCaseView;
+import ru.dimorinny.showcasecard.position.Position;
+import ru.dimorinny.showcasecard.position.ShowCasePosition;
+import ru.dimorinny.showcasecard.radius.Radius;
 
-import java.util.Objects;
 
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
@@ -59,6 +57,25 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
+
+        showtool(new ShowCasePosition() {
+            @Override
+            public PointF getPosition(Activity activity) {
+                return null;
+            }
+        });
+
+        showtool1(new ShowCasePosition() {
+            @Override
+            public PointF getPosition(Activity activity) {
+                return null;
+            }
+        });
+
+
+
+
+
         if (savedInstanceState == null)
         {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
@@ -66,7 +83,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             //nvDrawer.setCheckedItem(R.id.);
         }
 
-        btm_nav = findViewById(R.id.b_nav);
+
+
+                              btm_nav = findViewById(R.id.b_nav);
 
         btm_nav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener()
         {
@@ -76,24 +95,36 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 switch (item.getItemId())
                 {
                     case R.id.btm_nav1:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+
+                        getSupportFragmentManager().beginTransaction()
+                                .setCustomAnimations(R.anim.slide_from_right,R.anim.slide_to_right)
+                                .replace(R.id.fragment_container,
                                 new Main_Fragment()).commit();
+
                         break;
 
 
                     case R.id.btm_nav2:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                                new Bottom_nav_Fragment()).commit();
+                        getSupportFragmentManager().beginTransaction()
+                                .setCustomAnimations(R.anim.slide_from_right,R.anim.slide_to_left,R.anim.slide_from_left,R.anim.slide_to_right)
+                        .replace(R.id.fragment_container,
+                                new Bottom_nav_Fragment_1()).commit();
+
                         break;
 
                     case R.id.btm_nav3:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                                new Bottom_nav_Fragment()).commit();
+                        getSupportFragmentManager().beginTransaction()
+                                .setCustomAnimations(R.anim.slide_from_right,R.anim.slide_to_left,R.anim.slide_from_left,R.anim.slide_to_right)
+                                .replace(R.id.fragment_container,
+                                new Bottom_nav_Fragment_2()).commit();
+
                         break;
 
                     case R.id.btm_nav4:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                                new Bottom_nav_Fragment()).commit();
+                        getSupportFragmentManager().beginTransaction()
+                                .setCustomAnimations(R.anim.slide_from_right,R.anim.slide_to_left,R.anim.slide_from_left,R.anim.slide_to_right)
+                                .replace(R.id.fragment_container,
+                                new Bottom_nav_Fragment_3()).commit();
                         break;
 
 
@@ -102,8 +133,38 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
 
         });
+
+
     }
 
+
+
+
+    private void showtool1(ShowCasePosition position)
+
+    {
+
+        position =new Position(new PointF( 350.0F, 550.20F));
+        new ShowCaseView.Builder(MainActivity.this)
+                .withTypedPosition(position)
+                .withTypedRadius(new Radius(200F))
+                .withContent("these are profiles")
+                .build()
+                .show(MainActivity.this);
+
+    }
+
+    private void showtool(ShowCasePosition position)
+    {
+        position =new Position(new PointF( 70.0F, 100.0F));
+        new ShowCaseView.Builder(MainActivity.this)
+                .withTypedPosition(position)
+                 .withTypedRadius(new Radius(60F))
+                .withContent("this is Navigatipon Drawer")
+                .build()
+                .show(MainActivity.this);
+
+    }
 
     //navigation drawer//
     @Override
@@ -163,7 +224,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 
-
     @Override
     public void onBackPressed()
     {
@@ -178,16 +238,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     }
 }
-//    protected void pushFragment(Fragment fragment) {
-//        if (fragment == null)
-//            return;
 //
-//        FragmentManager fragmentManager = getFragmentManager();
-//        if (fragmentManager != null) {
-//            FragmentTransaction ft = fragmentManager.beginTransaction();
-//            if (ft != null) {
-//                ft.replace(R.id.fragment_container, fragment);
-//                ft.commit();
-
 
 
