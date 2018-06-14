@@ -6,9 +6,7 @@
     android:id="@+id/ff2_sv"
     android:scrollbarFadeDuration="800"
     android:scrollbarSize="15dp"
-
     xmlns:android="http://schemas.android.com/apk/res/android">
-
 
         <LinearLayout
             xmlns:tools="http://schemas.android.com/tools"
@@ -17,42 +15,60 @@
             android:gravity="center"
             android:orientation="vertical">
 
-
-            <ImageView
-                android:layout_marginTop="10dp"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/ic_menu_camera" />
-
-            <TextView
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="3dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="95dp">
+                <LinearLayout
+                    android:padding="2dp"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_height="match_parent">
 
-                android:text="@string/click_here_to_take_picture" />
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="75dp"
 
+                        android:src="@drawable/ic_menu_camera" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="10dp"
+                        android:textColor="#f00"
+                        android:text="@string/click_here_to_take_picture" />
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
 
 
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:gravity="center">
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="15"
+                    android:textSize="15sp"
+                    android:inputType="textPassword"
                     android:layout_margin="5dp"
                     android:hint="@string/password" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:gravity="center">
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="15"
+                    android:inputType="textPassword"
+                    android:textSize="15sp"
                     android:layout_margin="5dp"
                     android:hint="@string/confirm_password" />
 
@@ -60,26 +76,28 @@
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:gravity="center">
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:ems="15"
+                    android:textSize="15sp"
                     android:hint="@string/city"
                     android:inputType="text" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:gravity="center">
 
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="15"
+                    android:textSize="15sp"
                     android:layout_margin="5dp"
                     android:hint="@string/area"
                     android:inputType="text" />
@@ -88,61 +106,50 @@
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:gravity="center">
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="15"
+                    android:textSize="15sp"
                     android:layout_margin="5dp"
                     android:hint="@string/pincode"
                     android:inputType="number"
                     android:maxLength="6" />
             </android.support.design.widget.TextInputLayout>
 
-
-
-
             <android.support.v7.widget.AppCompatSpinner
                 android:id="@+id/spdistrict"
+                android:layout_width="280dp"
 
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="30dp"
-                android:layout_marginStart="30dp">
+                android:layout_height="30dp"
+                android:layout_margin="4dp">
 
             </android.support.v7.widget.AppCompatSpinner>
 
             <android.support.v7.widget.AppCompatSpinner
                 android:id="@+id/spstate"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="30dp"
-                android:layout_marginStart="30dp">
+                android:layout_width="280dp"
+                android:layout_height="30dp"
+                android:layout_margin="4dp">
 
             </android.support.v7.widget.AppCompatSpinner>
 
             <android.support.v7.widget.AppCompatSpinner
                 android:id="@+id/spcountry"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:focusable="true"
-                android:focusedByDefault="true"
-                android:layout_marginEnd="30dp"
-                android:layout_marginStart="30dp">
+                android:layout_width="280dp"
+                android:layout_height="30dp"
+                android:layout_margin="4dp">
 
             </android.support.v7.widget.AppCompatSpinner>
 
 
 
-
-
-
-
-
             <TableLayout
                 android:layout_width="match_parent"
-                android:layout_margin="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:layout_height="wrap_content">
 
                 <TableRow>

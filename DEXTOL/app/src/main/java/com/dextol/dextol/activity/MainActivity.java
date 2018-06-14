@@ -97,7 +97,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     case R.id.btm_nav1:
 
                         getSupportFragmentManager().beginTransaction()
-                                .setCustomAnimations(R.anim.slide_from_right,R.anim.slide_to_right)
                                 .replace(R.id.fragment_container,
                                 new Main_Fragment()).commit();
 
@@ -106,15 +105,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                     case R.id.btm_nav2:
                         getSupportFragmentManager().beginTransaction()
-                                .setCustomAnimations(R.anim.slide_from_right,R.anim.slide_to_left,R.anim.slide_from_left,R.anim.slide_to_right)
-                        .replace(R.id.fragment_container,
+                                .setCustomAnimations(R.anim.slide_from_left,R.anim.slide_from_right)
+                               // .setCustomAnimations(R.anim.slide_from_right,R.anim.slide_to_left,R.anim.slide_from_right,R.anim.slide_to_left)
+                                .replace(R.id.fragment_container,
                                 new Bottom_nav_Fragment_1()).commit();
 
                         break;
 
                     case R.id.btm_nav3:
                         getSupportFragmentManager().beginTransaction()
-                                .setCustomAnimations(R.anim.slide_from_right,R.anim.slide_to_left,R.anim.slide_from_left,R.anim.slide_to_right)
+                                .setCustomAnimations(R.anim.slide_from_right,R.anim.slide_from_left)
+                               // .setCustomAnimations(R.anim.slide_from_right,R.anim.slide_to_left,R.anim.slide_from_left,R.anim.slide_to_right)
                                 .replace(R.id.fragment_container,
                                 new Bottom_nav_Fragment_2()).commit();
 

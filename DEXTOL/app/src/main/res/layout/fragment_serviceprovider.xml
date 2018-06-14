@@ -30,12 +30,15 @@
                     android:layout_margin="5dp">
 
                     <CheckBox
+
+                        android:shadowRadius="@integer/card_flip_time_full"
                         android:id="@+id/cb1"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:text="@string/doctor" />
 
                     <CheckBox
+                        android:shadowRadius="@integer/card_flip_time_half"
                         android:id="@+id/cb2"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -51,6 +54,7 @@
                     android:layout_marginStart="5dp">
 
                     <CheckBox
+                        android:shadowRadius="@integer/half_slide_up_down_duration"
                         android:id="@+id/cb3"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -58,6 +62,7 @@
                         android:text="@string/medical_stores" />
 
                     <CheckBox
+                        android:shadowRadius="@integer/slide_up_down_duration"
                         android:id="@+id/cb4"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"

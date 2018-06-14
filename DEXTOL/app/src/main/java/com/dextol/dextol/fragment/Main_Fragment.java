@@ -3,9 +3,8 @@ package com.dextol.dextol.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.BottomSheetDialog;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,10 +17,8 @@ import android.widget.LinearLayout;
 import com.dextol.dextol.R;
 import com.dextol.dextol.activity.Diagnostics_profile;
 import com.dextol.dextol.activity.Doctor_profile;
-import com.dextol.dextol.activity.MainActivity;
 import com.dextol.dextol.activity.Medical_Store_profile;
 import com.dextol.dextol.activity.Treatment_profile;
-import com.dextol.dextol.activity.View_All_Specialization;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -29,7 +26,7 @@ import com.dextol.dextol.activity.View_All_Specialization;
 public class Main_Fragment extends Fragment
 {
 
-
+    BottomSheetDialog bsd;
     LinearLayout ll;
     ImageView b1, b2, b3, b4;
     ImageView iv1, iv2, iv3, iv4, iv5, iv6, iv7, iv8;
@@ -102,17 +99,6 @@ public class Main_Fragment extends Fragment
             {
                 Intent it = new Intent(getActivity(), Treatment_profile.class);
                 startActivity(it);
-            }
-        });
-        b5.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view)
-            {
-
-                Intent it = new Intent(getActivity(), View_All_Specialization.class);
-                startActivity(it);
-
             }
         });
 
@@ -188,6 +174,111 @@ public class Main_Fragment extends Fragment
                 startActivity(it);
             }
         });
+
+
+        //view all by specialization//
+        b5.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+
+
+                ImageView iv1,iv2,iv3,iv4,iv5,iv6,iv7,iv8;
+
+                bsd = new BottomSheetDialog(getContext());
+                bsd.setCancelable(true);
+                bsd.setCanceledOnTouchOutside(true);
+                View v = LayoutInflater.from(getContext()).inflate(R.layout.activity_view__all__specialization, null);
+                bsd.setContentView(v);
+                bsd.show();
+
+                iv1=v.findViewById(R.id.dermatology_img_spec);
+                iv2=v.findViewById(R.id.cardiology_img_spec);
+                iv3=v.findViewById(R.id.gynacology_img_spec);
+                iv4=v.findViewById(R.id.orthopedics_img_spec);
+                iv5=v.findViewById(R.id.ent_img_spec);
+                iv6=v.findViewById(R.id.pulmonology_img_spec);
+                iv7=v.findViewById(R.id.urology_img_spec);
+                iv8=v.findViewById(R.id.general_img_spec);
+
+
+                iv1.setOnClickListener(new View.OnClickListener()
+                {
+                    @Override
+                    public void onClick(View view)
+                    {
+                        Intent it=new Intent(getActivity(),Doctor_profile.class);
+                        startActivity(it);
+                    }
+                });
+                iv2.setOnClickListener(new View.OnClickListener()
+                {
+                    @Override
+                    public void onClick(View view)
+                    {
+                        Intent it=new Intent(getActivity(),Doctor_profile.class);
+                        startActivity(it);
+                    }
+                });
+                iv3.setOnClickListener(new View.OnClickListener()
+                {
+                    @Override
+                    public void onClick(View view)
+                    {
+                        Intent it=new Intent(getActivity(),Doctor_profile.class);
+                        startActivity(it);
+                    }
+                });
+                iv4.setOnClickListener(new View.OnClickListener()
+                {
+                    @Override
+                    public void onClick(View view)
+                    {
+                        Intent it=new Intent(getActivity(),Doctor_profile.class);
+                        startActivity(it);
+                    }
+                });
+                iv5.setOnClickListener(new View.OnClickListener()
+                {
+                    @Override
+                    public void onClick(View view)
+                    {
+                        Intent it=new Intent(getActivity(),Doctor_profile.class);
+                        startActivity(it);
+                    }
+                });
+                iv6.setOnClickListener(new View.OnClickListener()
+                {
+                    @Override
+                    public void onClick(View view)
+                    {
+                        Intent it=new Intent(getActivity(),Doctor_profile.class);
+                        startActivity(it);
+                    }
+                });
+                iv7.setOnClickListener(new View.OnClickListener()
+                {
+                    @Override
+                    public void onClick(View view)
+                    {
+                        Intent it=new Intent(getActivity(),Doctor_profile.class);
+                        startActivity(it);
+                    }
+                });
+                iv8.setOnClickListener(new View.OnClickListener()
+                {
+                    @Override
+                    public void onClick(View view)
+                    {
+                        Intent it=new Intent(getActivity(),Doctor_profile.class);
+                        startActivity(it);
+                    }
+                });
+
+            }
+        });
+
 
         return v;
 

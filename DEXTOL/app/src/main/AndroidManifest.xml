@@ -74,15 +74,14 @@
         <activity android:name=".activity.Order_medicines"
             android:parentActivityName=".activity.MainActivity"/>
 
-        <activity android:name=".activity.View_All_Specialization"
-            android:parentActivityName=".activity.MainActivity"/>
-
 
         <activity android:name=".activity.Family_form1"
+            android:theme="@style/Small_Action"
             android:parentActivityName=".activity.Add_Family"
             android:label="Personal Details"/>
 
         <activity android:name=".activity.Family_Form2"
+            android:theme="@style/Small_Action"
             android:parentActivityName=".activity.Family_Form2"
             android:label="Postal Address"/>
     </application>

@@ -18,9 +18,9 @@ import com.dextol.dextol.R;
 public class Family_Form2 extends AppCompatActivity
 {
     Button b1, b2;
-    String Country[] = {"--Select Country-- "};
-    String State[] = {"--Select State-- "};
-    String District[] = {"--Select District-- "};
+    String Country[] = {" Select Country "};
+    String State[] = {" Select State "};
+    String District[] = {" Select District "};
     Spinner sp1, sp2, sp3;
     NestedScrollView sv;
 
@@ -37,7 +37,11 @@ public class Family_Form2 extends AppCompatActivity
         b2 = findViewById(R.id.register_form_b1);
         sv = findViewById(R.id.ff2_sv);
 
+
+
         ArrayAdapter<String> a1 = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, Country);
+        sp1.getBaseline();
+        sp1.getPopupBackground();
         sp1.setAdapter(a1);
 
         ArrayAdapter<String> a2 = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, State);
@@ -46,9 +50,6 @@ public class Family_Form2 extends AppCompatActivity
         ArrayAdapter<String> a3 = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, District);
         sp3.setAdapter(a3);
 
-        Animation fadein = AnimationUtils.loadAnimation(this, R.anim.slide_from_left);
-        sv.startAnimation(fadein);
-
         b1.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -56,7 +57,6 @@ public class Family_Form2 extends AppCompatActivity
             {
                 Intent it = new Intent(Family_Form2.this, Family_form1.class);
                 startActivity(it);
-                overridePendingTransition(R.anim.slide_from_left, R.anim.zoom_in);
                 finish();
 
             }

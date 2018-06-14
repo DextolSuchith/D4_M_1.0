@@ -63,7 +63,7 @@ public class Doctor_Booking extends AppCompatActivity
                     public void onDateSet(DatePicker datePicker, int i, int i1, int i2)
                     {
                         i1 = i1 + 1;
-                        tv.setText(i + "/" + i1 + "/" + i2);
+                        tv.setText(i2 + "/" + i1 + "/" + i);
                     }
                 }, year, month, day);
                 dp.show();

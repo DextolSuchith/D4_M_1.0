@@ -89,6 +89,8 @@
     <string name="general_physician">General Physician</string>
     <string name="discount">Discount</string>
     <string name="availability">Availability</string>
+    <string name="male">Male</string>
+    <string name="i_am">I Am</string>
 
 
 </resources>
