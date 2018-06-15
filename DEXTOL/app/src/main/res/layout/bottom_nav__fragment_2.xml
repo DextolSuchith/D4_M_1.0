@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f5c585"
-    tools:context=".fragment.Bottom_nav_Fragment_1">
+    android:background="#ea1814"
+    tools:context=".fragment.Bottom_nav_Fragment_2">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
@@ -14,6 +14,6 @@
         android:textSize="20dp"
         android:ems="10"
         android:layout_height="wrap_content"
-        android:text="BNV_1" />
+        android:text="BNV_2" />
 
 </FrameLayout>

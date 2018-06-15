@@ -1,6 +1,7 @@
 package com.dextol.dextol.activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -32,7 +33,10 @@ public class Order_medicines extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                Toast.makeText(Order_medicines.this, "select prescription", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                intent.setType("file/*");
+                startActivity(intent);
 
             }
         });
@@ -47,4 +51,7 @@ public class Order_medicines extends AppCompatActivity
         });
 
     }
+
+
+
 }

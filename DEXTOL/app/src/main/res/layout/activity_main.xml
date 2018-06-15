@@ -55,7 +55,7 @@
                 android:layout_height="45dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentBottom="true"
-                android:background="@color/lightGreen"
+                android:background="@color/colorPrimary"
                 android:elevation="15dp"
                 app:itemIconTint="@color/nav_white"
                 app:itemTextColor="@color/nav_white"

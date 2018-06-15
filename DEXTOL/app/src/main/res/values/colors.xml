@@ -5,7 +5,7 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="lightGreen">#00b3d5</color>
-    <color name="B_color">#e4e121</color>
+
     <color name="Green">#167032</color>
     <color name="Orange">#ff7940</color>
     <color name="white">#fffcfc</color>
@@ -14,6 +14,15 @@
 
     <color name="layout">#72f5e6</color>
 
+
+    <color name="b_color_pressed">#f4ec0c</color>
+    <color name="btn_color">#1ac5d1</color>
+
+
     <color name="nav_white">#ffffff</color>
     <color name="nav_white_trfanspatent">#00ffffff</color>
+
+
+
+   <!--// -->
 </resources>

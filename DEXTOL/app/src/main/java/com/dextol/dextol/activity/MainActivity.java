@@ -62,6 +62,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public PointF getPosition(Activity activity) {
                 return null;
+
             }
         });
 
@@ -72,15 +73,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
-
-
-
-
         if (savedInstanceState == null)
         {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new Main_Fragment()).commit();
-            //nvDrawer.setCheckedItem(R.id.);
+
         }
 
 
@@ -102,11 +99,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                         break;
 
-
                     case R.id.btm_nav2:
                         getSupportFragmentManager().beginTransaction()
-                                .setCustomAnimations(R.anim.slide_from_left,R.anim.slide_from_right)
-                               // .setCustomAnimations(R.anim.slide_from_right,R.anim.slide_to_left,R.anim.slide_from_right,R.anim.slide_to_left)
+                                .setCustomAnimations(R.anim.slide_from_right,R.anim.slide_to_left,R.anim.slide_from_right,R.anim.slide_to_left)
                                 .replace(R.id.fragment_container,
                                 new Bottom_nav_Fragment_1()).commit();
 
@@ -114,8 +109,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                     case R.id.btm_nav3:
                         getSupportFragmentManager().beginTransaction()
-                                .setCustomAnimations(R.anim.slide_from_right,R.anim.slide_from_left)
-                               // .setCustomAnimations(R.anim.slide_from_right,R.anim.slide_to_left,R.anim.slide_from_left,R.anim.slide_to_right)
+                                .setCustomAnimations(R.anim.slide_from_right,R.anim.slide_to_left,R.anim.slide_from_left,R.anim.slide_to_right)
                                 .replace(R.id.fragment_container,
                                 new Bottom_nav_Fragment_2()).commit();
 
@@ -127,20 +121,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                                 .replace(R.id.fragment_container,
                                 new Bottom_nav_Fragment_3()).commit();
                         break;
-
-
                 }
                 return true;
             }
 
         });
 
-
     }
-
-
-
-
     private void showtool1(ShowCasePosition position)
 
     {
@@ -164,7 +151,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 .withContent("this is Navigatipon Drawer")
                 .build()
                 .show(MainActivity.this);
-
     }
 
     //navigation drawer//

@@ -29,6 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="Sort"
+            android:textColor="@color/btn_text_color"
             android:background="@drawable/button_shape"
             android:layout_weight="1"
             android:textAllCaps="false"
@@ -36,6 +37,7 @@
         <Button
             android:layout_weight="1"
             android:text="@string/filters"
+            android:textColor="@color/btn_text_color"
             android:background="@drawable/button_shape"
             android:onClick="filter"
             android:textAllCaps="false"

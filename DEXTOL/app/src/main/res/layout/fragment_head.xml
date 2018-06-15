@@ -19,13 +19,14 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textColor="@color/btn_text_color"
                 android:background="@drawable/button_shape"
                 android:text="@string/user"
                 android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/servicereg"
-
+                android:textColor="@color/btn_text_color"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

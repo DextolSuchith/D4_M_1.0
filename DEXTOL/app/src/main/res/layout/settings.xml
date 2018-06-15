@@ -8,16 +8,45 @@
 
     <LinearLayout
         android:layout_marginTop="30dp"
+        android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:gravity="center"
         android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/ic_menu_camera" />
+        <android.support.v7.widget.CardView
+         android:layout_width="150dp"
+            android:layout_marginRight="10dp"
+            android:padding="10dp"
+         android:layout_height="130dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="134dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:onClick="get_picture"
+                    android:src="@drawable/ic_menu_camera" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:text="Change Profile"
+                    android:textColor="#f00"
+                    android:textSize="10dp" />
+
+            </LinearLayout>
+
+</android.support.v7.widget.CardView>
 
         <TextView
             android:layout_width="wrap_content"
@@ -43,6 +72,7 @@
             android:layout_marginEnd="25dp"
             android:layout_marginStart="25dp"
             android:ems="10"
+            android:textColor="@color/btn_text_color"
             android:background="@drawable/button_shape"
             android:onClick="Update_Details"
             style="@style/B_style"
@@ -58,6 +88,7 @@
             android:background="@drawable/button_shape"
             android:onClick="Change_password"
             android:layout_marginTop="10dp"
+            android:textColor="@color/btn_text_color"
             android:layout_marginStart="25dp"
             android:ems="10"
             android:text="@string/change_password"

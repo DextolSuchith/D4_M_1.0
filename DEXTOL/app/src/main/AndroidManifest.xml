@@ -4,51 +4,63 @@
 
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
+    <supports-screens android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:xlargeScreens="true"
+        android:anyDensity="true" />
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/dexlogopng"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:label=" Dextol"
-
         android:theme="@style/AppTheme">
+
         <activity android:name=".activity.Home">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.Login"
-             />
+
+        <activity android:name=".activity.Login"/>
+
         <activity android:name=".activity.Doctor_profile"
-            android:parentActivityName=".activity.MainActivity"/>
+            android:parentActivityName=".activity.MainActivity"
+            android:label="Doctor Profile"/>
 
         <activity android:name=".activity.Diagnostics_profile"
-            android:parentActivityName=".activity.MainActivity"/>
+            android:parentActivityName=".activity.MainActivity"
+            android:label="Diagnostics Profile"/>
 
         <activity android:name=".activity.Treatment_profile"
-            android:parentActivityName=".activity.MainActivity"/>
+            android:parentActivityName=".activity.MainActivity"
+            android:label="Treatment/Theraphy Profile"/>
 
         <activity android:name=".activity.Medical_Store_profile"
-            android:parentActivityName=".activity.MainActivity"/>
+            android:parentActivityName=".activity.MainActivity"
+            android:label="Medical Store Profile"/>
 
         <activity android:name=".activity.Registration"
-            android:theme="@style/NoActionBar"
-            />
+            android:theme="@style/NoActionBar"/>
+
         <activity
             android:name=".activity.MainActivity"
             android:label="Dextol"
-            android:theme="@style/NoActionBar"
-            />
+            android:theme="@style/NoActionBar"/>
+
         <activity android:name=".activity.Add_Family"
             android:parentActivityName=".activity.MainActivity"/>
 
         <activity android:name=".activity.Dashboard"
-            android:parentActivityName=".activity.MainActivity"/>
+            android:parentActivityName=".activity.MainActivity" />
 
         <activity android:name=".activity.Appointments"
             android:parentActivityName=".activity.MainActivity"/>
@@ -74,7 +86,6 @@
         <activity android:name=".activity.Order_medicines"
             android:parentActivityName=".activity.MainActivity"/>
 
-
         <activity android:name=".activity.Family_form1"
             android:theme="@style/Small_Action"
             android:parentActivityName=".activity.Add_Family"
@@ -84,6 +95,8 @@
             android:theme="@style/Small_Action"
             android:parentActivityName=".activity.Family_Form2"
             android:label="Postal Address"/>
+
+
     </application>
 
 </manifest>

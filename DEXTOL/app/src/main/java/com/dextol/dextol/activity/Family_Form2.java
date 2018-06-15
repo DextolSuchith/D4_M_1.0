@@ -1,7 +1,10 @@
 package com.dextol.dextol.activity;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -15,6 +18,8 @@ import android.widget.Toast;
 
 import com.dextol.dextol.R;
 
+import java.io.IOException;
+
 public class Family_Form2 extends AppCompatActivity
 {
     Button b1, b2;
@@ -22,7 +27,7 @@ public class Family_Form2 extends AppCompatActivity
     String State[] = {" Select State "};
     String District[] = {" Select District "};
     Spinner sp1, sp2, sp3;
-    NestedScrollView sv;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -35,8 +40,6 @@ public class Family_Form2 extends AppCompatActivity
         sp3 = findViewById(R.id.spdistrict);
         b1 = findViewById(R.id.previous_b2);
         b2 = findViewById(R.id.register_form_b1);
-        sv = findViewById(R.id.ff2_sv);
-
 
 
         ArrayAdapter<String> a1 = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, Country);
@@ -58,7 +61,6 @@ public class Family_Form2 extends AppCompatActivity
                 Intent it = new Intent(Family_Form2.this, Family_form1.class);
                 startActivity(it);
                 finish();
-
             }
         });
         b2.setOnClickListener(new View.OnClickListener()
@@ -70,7 +72,6 @@ public class Family_Form2 extends AppCompatActivity
             }
         });
 
-
     }
 
     @Override
@@ -79,5 +80,42 @@ public class Family_Form2 extends AppCompatActivity
         super.onBackPressed();
         finish();
         overridePendingTransition(R.anim.slide_from_left, R.anim.slide_to_right);
+    }
+
+    public void takepic(View view)
+    {
+
+        Intent intent = new Intent();
+        intent.setType("image/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);//
+        startActivityForResult(Intent.createChooser(intent, "Select Picture"),1212);
+
+
+    }
+    public void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1212)
+        {
+            if (resultCode == Activity.RESULT_OK)
+            {
+                if (data != null)
+                {
+                    try
+                    {
+
+                        Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), data.getData());
+
+                    } catch (IOException e)
+                    {
+                        e.printStackTrace();
+                    }
+
+                }
+            } else if (resultCode == Activity.RESULT_CANCELED)
+            {
+                Toast.makeText(this, "Cancelled", Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 }

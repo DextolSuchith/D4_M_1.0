@@ -2,7 +2,10 @@ package com.dextol.dextol.activity;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +14,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.dextol.dextol.R;
+
+import java.io.IOException;
 
 import static android.content.Context.LAYOUT_INFLATER_SERVICE;
 
@@ -66,7 +71,7 @@ public class Settings extends AppCompatActivity
         et1 = v.findViewById(R.id.old_pwd_changepwd);
         et2 = v.findViewById(R.id.pwd_changepwd);
         et3 = v.findViewById(R.id.confirm_pwd_changepwd);
-        b1 = v.findViewById(R.id.btn_change_pwd);
+        b1  = v.findViewById(R.id.btn_change_pwd);
 
         b1.setOnClickListener(new View.OnClickListener()
         {
@@ -81,4 +86,41 @@ public class Settings extends AppCompatActivity
     }
 
 
-}
+    public void get_picture(View view)
+    {
+
+        Intent intent = new Intent();
+        intent.setType("image/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);//
+        startActivityForResult(Intent.createChooser(intent, "Select Picture"),1212);
+
+
+    }
+    public void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1212)
+        {
+            if (resultCode == Activity.RESULT_OK)
+            {
+                if (data != null)
+                {
+                    try
+                    {
+
+                        Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), data.getData());
+
+                    } catch (IOException e)
+                    {
+                        e.printStackTrace();
+                    }
+
+                }
+            } else if (resultCode == Activity.RESULT_CANCELED)
+            {
+                Toast.makeText(this, "Cancelled", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+    }
+
